@@ -38,6 +38,7 @@ const processMessage = async (message: IMessage): Promise<void> => {
   const [command, argument] = text.split(' ');
 
   switch (command) {
+    case allowedCommands.start:
     case allowedCommands.help:
       await helpCommand(chatId, messageId);
       break;

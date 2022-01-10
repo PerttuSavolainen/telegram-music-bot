@@ -8,13 +8,15 @@ const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const helpMessage = () => `
 Meep Morp, I'm a Music Bot. Available commands:
 
-${allowedCommands.help} - Print this message.
-${allowedCommands.addToQueue} - Send link (youtube/spotify) to a queue. Usage: ${allowedCommands.addToQueue} <YOUR_LINK>
+${allowedCommands.help} - Show this message.
+${allowedCommands.addToQueue} - Add youtube or spotify link as an argument to a queue.
+Example: ${allowedCommands.addToQueue} https://youtu.be/dQw4w9WgXc
 
-Queued music links will be periodically shared in the music channel. Zeep.
+Queued music links will be periodically shared in the Music Channel. Zeep.
 `;
 
 export const allowedCommands: Readonly<{ [key: string]: string }> = {
+  start: '/start',
   help: '/help',
   addToQueue: '/q',
 };
