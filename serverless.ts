@@ -5,7 +5,7 @@ import processQueue from '@functions/processQueue';
 
 const serverlessConfiguration: AWS = {
   service: 'telegram-music-bot',
-  frameworkVersion: '2',
+  frameworkVersion: '3',
   plugins: [
     'serverless-esbuild',
   ],
@@ -13,7 +13,7 @@ const serverlessConfiguration: AWS = {
   variablesResolutionMode: '20210326',
   provider: {
     name: 'aws',
-    runtime: 'nodejs14.x',
+    runtime: 'nodejs18.x',
     region: 'eu-north-1',
     apiGateway: {
       minimumCompressionSize: 1024,
@@ -60,7 +60,7 @@ const serverlessConfiguration: AWS = {
       minify: false,
       sourcemap: true,
       exclude: ['aws-sdk'],
-      target: 'node14',
+      target: 'node18',
       define: { 'require.resolve': undefined },
       platform: 'node',
       concurrency: 10,
