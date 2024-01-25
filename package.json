@@ -14,7 +14,7 @@
     "@middy/core": "^5.2.3",
     "@middy/http-json-body-parser": "^5.2.3",
     "@sentry/node": "^7.98.0",
-    "dynamoose": "^2.8.8",
+    "dynamoose": "^4.0.0",
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {

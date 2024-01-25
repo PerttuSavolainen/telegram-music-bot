@@ -1,10 +1,10 @@
 import * as dynamoose from "dynamoose";
-import { Document } from "dynamoose/dist/Document";
+import { Item } from "dynamoose/dist/Item";
 
 const linkTableName = process.env.LINK_TABLE_NAME;
 const index = process.env.LINK_TABLE_GSI_NAME;
 
-export class MusicLink extends Document {
+export class MusicLink extends Item {
   link: string;
   notSent?: number;
   createdAt?: number;
@@ -23,7 +23,7 @@ const schema = new dynamoose.Schema({
     type: Number,
     index: {
       name: index,
-      global: true,
+      type: 'global',
       rangeKey: 'createdAt',
     },
   },
