@@ -35,7 +35,7 @@ const processMessage = async (message: IMessage): Promise<void> => {
   } = message;
 
   // ignore everything after "first argument" from the message
-  const [command, argument] = text.split(' ');
+  const [command, argument] = (text || "").split(' ');
 
   switch (command) {
     case allowedCommands.start:
