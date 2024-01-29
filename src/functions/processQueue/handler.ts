@@ -35,4 +35,4 @@ const processQueue: any = async () => {
   };
 }
 
-export const main = middyfy(processQueue);
+export const main = middyfy(processQueue, false);
